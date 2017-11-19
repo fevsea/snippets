@@ -1,0 +1,2 @@
+// Inflate layout (on create)
+setContentView(R.layout.activity_main);
