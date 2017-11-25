@@ -1,0 +1,10 @@
+<!-- Declare string resources -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="today">Today</string>
+</resources>
+
+
+
+<!-- Consume string resources -->
+<TextView text=”@string/today” />
