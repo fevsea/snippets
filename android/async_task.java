@@ -1,7 +1,6 @@
 public class MyAsyncTask extends AsyncTask<URL, Integer, Long> {
   @Override
   protected void onPreExecute() {
-    super.onPreExecute();
     // Init UI
   }
 

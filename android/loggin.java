@@ -1,4 +1,4 @@
-private static final String TAG = MyActivity.class.getName();
+private static final String TAG = MyActivity.class.getSimpleName();
 
 Log.wtf(TAG, "Wat a Terrible Failure, used in system debug");
 Log.e(TAG, "Obvious error. Keep in relase");
