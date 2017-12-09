@@ -35,6 +35,12 @@ sudo apt install -y virtualbox
 #Mocp
 echo "Installing Mocp"
 sudo apt install -y moc
+
+# OpenSCAD
+sudo add-apt-repository -y  ppa:openscad/releases
+sudo apt-get update
+sudo apt-get install -y openscad
+
 #gparted
 echo "Installing Gparted"
 sudo apt install -y gparted
