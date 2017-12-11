@@ -49,7 +49,7 @@ echo "Installing python"
 sudo apt install -y python3 python3-pip ipython3
 
 echo "Installing dev tools"
-sudo apt install -y  git lm-sensors openssh-server openssh-client tmux hardinfo
+sudo apt install -y  git lm-sensors openssh-server openssh-client tmux hardinfo curl
 
 echo "Installing random stuff"
 sudo apt install -y sl cowsay cowsay lolcat
