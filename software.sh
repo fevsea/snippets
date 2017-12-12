@@ -51,6 +51,13 @@ sudo apt install -y python3 python3-pip ipython3
 echo "Installing dev tools"
 sudo apt install -y  git lm-sensors openssh-server openssh-client tmux hardinfo curl
 
+######################
+
+#UPCNet
+sudo apt update
+sudo apt-get install -y libc6-i386 lib32z1
+# https://serveistic.upc.edu/ca/upclink/documentacio/manual-ubuntu
+
 echo "Installing random stuff"
 sudo apt install -y sl cowsay cowsay lolcat
 sudo pip3 install thefuck
@@ -58,3 +65,10 @@ echo "eval $(thefuck --alias)" >> ~/.bashrc
 source ~/.bashrc
 
 #alias wake="sudo etherwake -i enp3s0 00:21:cc:b7:dd:14"
+sudo dpkg -i ps-pulse-linux-8*-ubuntu-debian-installer.deb
+sudo apt-get install -y libwebkitgtk-1.0-0:i386
+sudo apt-get install -y libproxy1-plugin-gsettings:i386
+sudo apt-get install -y libproxy1-plugin-webkit:i386
+sudo apt-get install -y libdconf1:i386
+sudo apt-get install -y dconf-gsettings-backend:i386
+#https://vpn.upc.edu/estudiants
