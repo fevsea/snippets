@@ -138,3 +138,57 @@ loopStructure(expression){
   break labelName;
   continue labelName;
 }
+
+
+// Restructuring
+var foo = ['one', 'two', 'three'];
+
+// without destructuring
+var one   = foo[0];
+var two   = foo[1];
+var three = foo[2];
+
+// with destructuring
+var [one, two, three] = foo;
+
+// Normal operators try to convert types
+3 == '3'  // true
+3 === '3'  // false
+
+propNameOrNumber in objectName  // return booloean
+objectName instanceof objectType  // return boolean
+
+// Spread operator
+var parts = ['shoulder', 'knees'];
+var lyrics = ['head', ...parts, 'and', 'toes'];
+
+function f(x, y, z) { }
+var args = [0, 1, 2];
+f(...args);
+
+
+// Operator recednce
+member 	. []
+call / create instance 	() new
+negation/increment 	! ~ - + ++ -- typeof void delete
+multiply/divide 	* / %
+addition/subtraction 	+ -
+bitwise shift 	<< >> >>>
+relational 	< <= > >= in instanceof
+equality 	== != === !==
+bitwise-and 	&
+bitwise-xor 	^
+bitwise-or 	|
+logical-and 	&&
+logical-or 	||
+conditional 	?:
+assignment 	= += -= *= /= %= <<= >>= >>>= &= ^= |=
+comma 	,
+
+
+
+// Miscelanuous
+delete objectName  // returns true or false
+typeof var  // return string with type
+typeof null;  // objectName
+void statements  // Eveluates withour returnig anything
