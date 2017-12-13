@@ -186,9 +186,13 @@ assignment 	= += -= *= /= %= <<= >>= >>>= &= ^= |=
 comma 	,
 
 
-
 // Miscelanuous
 delete objectName  // returns true or false
 typeof var  // return string with type
 typeof null;  // objectName
 void statements  // Eveluates withour returnig anything
+
+
+// Numbers
+
+// All in ieee double.-pprecisio 64 (no integers), (253 -1) and 253 -1) and + Infinity, - Infinity, NaN
