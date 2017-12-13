@@ -78,3 +78,63 @@ var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
 var car = { manyCars: {a: 'Saab', 'b': 'Jeep'}, 7: 'Mazda' };
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
+
+
+
+/*
+*  Controll flow
+*/
+
+// evaluates to false; false undefined null 0 NaN ""
+
+if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else if (condition_n) {
+  statement_n;
+} else {
+  statement_last;
+}
+
+
+switch (expression) {
+  case label_1:
+    statements_1
+    [break;]
+  case label_2:
+    statements_2
+    [break;]
+    ...
+  default:
+    statements_def
+    [break;]
+}
+
+var a =  condición ? expr1 : expr2
+// Lops and iterations
+
+for ([initialExpression]; [condition]; [incrementExpression])
+  statement
+
+// Iterates a specified variable over all the enumerable properties of an object
+for (variable in object)  // Do not use in arrays
+  statements
+
+// Iterates over iterable objects (Arraus, Map, Set, arguments...)
+for (variable of object)
+  statement
+
+
+do
+  statement
+while (condition);
+
+while (condition)
+  statement
+
+labelName:
+loopStructure(expression){
+  break labelName;
+  continue labelName;
+}
