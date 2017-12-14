@@ -1,1 +1,4 @@
 Flipping Tables / (╯°□°）╯︵ ┻━┻
+
+Firefox allow pasting:
+about:config -> devtools.selfxss.count = 100
