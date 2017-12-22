@@ -29,3 +29,21 @@ function Car(make, model, year) {
   this.year = year;
 }
 var car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+
+// Getters and setters
+var o = {
+  a: 7,
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  }
+};
+
+var d = Date.prototype;
+Object.defineProperty(d, 'year', {
+  get: function() { return this.getFullYear(); },
+  set: function(y) { this.setFullYear(y); }
+});
