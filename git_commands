@@ -2,3 +2,4 @@
 eval "$(ssh-agent -s)" # Start ssh-agent Needed?
 ssh-add -k ~/.ssh/id_rsa #permanently add ssh key
 git config --global url."git@github.com:".insteadOf "https://github.com/"
+git config --global core.editor "nano"
