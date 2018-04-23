@@ -50,11 +50,55 @@ Never at a beginning or end of a number, or near a nonnumber symbol
 */
 
 
-
-
 /*
 Default values
 
 Unitialized fields got a default value by the compiler, usually 0.
 Do not rellay on it
 */
+
+
+/*
+Arrays
+
+Container objects that hold a fixed number of values of a single type.
+Each item is called an element, and is accesed by a numerical index starting at 0.
+*/
+
+// Array declararion
+int[] anArray = new int[10];
+int[] initAray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+// Multidimensional Array
+String[][] names = {
+  {"Mr. ", "Mrs. ", "Ms. "},
+  {"Smith", "Jones"}
+};
+
+// Utils
+anArray.length  // 10
+Arrays.sort(anArray);  // In place
+Arrays.parallelSort(anArray)  // Usefull for >~ 5000 elements
+
+System.arraycopy(Object src, int srcPos, Object dest, int destPos, int lenght);
+int[] = java.utils.copyOfRange(T[] origina, int from, int to);
+java.utils.fill(T[] a, int fromIndex, int toIndext, T value);  // void
+java.utils.equals(Object[] a, Object a2);  // boolean
+
+
+// Operators preference
+
+expr++ expr--                  // postfix
+++expr --expr +expr -expr ~ !  // unary
+* / %                          // multiplicative
++ -                            // additive
+<< >> >>>                      // shift
+< > <= >= instanceof           // relational
+== !=                          // equality
+&                              // bitwise AND
+^                              // bitwise OR
+|                              // bitwise exclusive OR
+&&                             // logical AND
+||                             // logical OR
+? :                            // ternary
+= += -+ *= /= %= &= ^= |= <<=  // assignment
