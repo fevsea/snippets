@@ -74,7 +74,7 @@ String[][] names = {
   {"Mr. ", "Mrs. ", "Ms. "},
   {"Smith", "Jones"}
 };
-k
+
 // Utils
 anArray.length  // 10
 Arrays.sort(anArray);  // In place
@@ -102,3 +102,26 @@ expr++ expr--                  // postfix
 ||                             // logical OR
 ? :                            // ternary
 = += -+ *= /= %= &= ^= |= <<=  // assignment
+
+
+/* Modifiers
+
+Acces levels
+
+Modifier    Class   Package Subclass    World
+
+public      Y       Y       Y           Y
+protected   Y       Y       Y           N
+no modifier Y       Y       N           N       // aka Package-privative
+private     Y       N       N           N
+
+A class (top level) can be public or package-privative
+At a member level all acces levels are possible
+
+
+static  // modifier is used to design a class-level field
+
+final   // modifiers marks a variable that does not change
+a final method cannot be overrided (usefull during instance initialization)
+
+*/

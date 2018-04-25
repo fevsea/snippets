@@ -2,6 +2,15 @@
 
 // Class declaration
 class Bicycle {
+  // static declarations
+  static {
+    // static initiallization block
+    // if static variables need some complex initialization, goes here
+  }
+
+  {
+    // if present this code will be copied to every constructor
+  }
 
   // the Bicycle class has
   // three fields
