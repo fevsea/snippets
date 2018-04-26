@@ -40,6 +40,7 @@ class Bicycle {
   }
 }
 
+// Interfaces can be declared inside clases, but only on static context (no inner)
 interface IMountainBike {
   // Will be required by the compiler
   void changeGear(int newGear);
@@ -72,4 +73,65 @@ class BicycleDemo {
     bike1.printCadence();
 
   }
+}
+
+
+/* Nested clases
+Those defined inside another class.
+Can be Static nested clases, or Inner classes
+
+Static nested classes are like any top-level class that have meen nested for packagin convenience.
+Can only be declared throw the class.
+
+
+Inner classes can be declared with any visibility.
+Have acces to all members of the enclosing class, even if pricate.
+Can obnly be declared throw an object.
+Serialization of inner classes are discorage, as can vary allong compilers.
+
+Local classes are those defined inside a block.
+Can access local variables and parameters of the enclosing block that are
+final or effectively final.
+Cannot define any static methods (unless final)
+
+*/
+
+// Shadowing problem
+public class ShadowTest {
+
+    public int x = 0;
+
+    class FirstLevel {
+
+        public int x = 1;
+
+        void methodInFirstLevel(int x) {
+            System.out.println("x = " + x);
+            System.out.println("this.x = " + this.x);
+            System.out.println("ShadowTest.this.x = " + ShadowTest.this.x);
+        }
+    }
+
+    public static void main(String... args) {
+       ShadowTest st = new ShadowTest();
+       ShadowTest.FirstLevel fl = st.new FirstLevel();
+       fl.methodInFirstLevel(23);
+   }
+}
+
+
+// Anonymous Classes
+HelloWorld frenchGreeting = new HelloWorld() {
+           String name = "tout le monde";
+           public void greet() {
+               greetSomeone("tout le monde");
+           }
+           public void greetSomeone(String someone) {
+               name = someone;
+               System.out.println("Salut " + name);
+           }
+       };
+
+new InterfaceOrSuperclass(construct args) {
+  method implementation;
 }
