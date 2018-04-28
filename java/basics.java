@@ -63,6 +63,9 @@ Arrays
 
 Container objects that hold a fixed number of values of a single type.
 Each item is called an element, and is accesed by a numerical index starting at 0.
+
+A list is an ordered collection.
+A collection is an objects that group multiples elements.
 */
 
 // Array declararion

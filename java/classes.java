@@ -94,6 +94,12 @@ Can access local variables and parameters of the enclosing block that are
 final or effectively final.
 Cannot define any static methods (unless final)
 
+SUM UP
+Local class - Declred inside a block. It-s an inner class and have acces to local vars
+Anonymous class - To declare fields or additional methods
+Lambda expression - Sinfle unit, or an instance of a functional interface.
+Static nested class - Only have acces to public fields. Similar to normal classes
+Inner class - Can only exist withing an instance of super. Can acces to all members
 */
 
 // Shadowing problem
@@ -135,3 +141,47 @@ HelloWorld frenchGreeting = new HelloWorld() {
 new InterfaceOrSuperclass(construct args) {
   method implementation;
 }
+
+
+// A funtional interfaces is witch only contains one abstract method,
+// (and some defauld or static methods) -> Lambda expressions capable
+// Java util functions -> https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+/* Syntax of lambda expressions
+
+*/
+
+(a, b) -> {return a}  // Input params type can be ommited.
+a -> a    //  If only one arg, optional paremeters.
+// If the body has a sinbgle expresion. ot value is returned. You can unse return.
+// Lambdas work on the same level of scoping where thay are declared.
+// As withing inner classes, lambdas can only acces final or effective final local variables.
+
+public static void printPersonsWithPredicate(
+    List<Person> roster, Predicate<Person> tester) {
+    for (Person p : roster) {
+        if (tester.test(p)) {
+            p.printPerson();
+        }
+    }
+}
+
+printPersonsWithPredicate(
+    roster,
+    p -> p.getGender() == Person.Sex.MALE
+        && p.getAge() >= 18
+        && p.getAge() <= 25
+);
+
+/* Method preference
+Kind 	                                      Example
+Reference to a static method 	              ContainingClass::staticMethodName
+Reference to an instance method of
+  a particular object 	                    containingObject::instanceMethodName
+Reference to an instance method of
+  an arbitrary object of a particular type 	ContainingType::methodName
+Reference to a constructor 	                ClassName::new
+*/
+// Those are equivalent
+(a, b) -> Person.compareByAge(a, b)
+Person::compareByAge
