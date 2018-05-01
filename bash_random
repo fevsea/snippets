@@ -1,2 +1,0 @@
-# Prevent apache2 to be stasrted automatically
-sudo update-rc.d apache2 disable   #enable

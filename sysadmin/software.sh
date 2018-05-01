@@ -44,7 +44,7 @@ echo "Installing python"
 sudo apt install -y python3 python3-pip ipython3
 
 echo "Installing dev tools"
-sudo apt install -y  git lm-sensors openssh-server openssh-client tmux hardinfo curl wireshark-qt aircrack-ng nmap
+sudo apt install -y  git lm-sensors gnupg-curl openssh-server openssh-client tmux hardinfo curl wireshark-qt aircrack-ng nmap
 
 echo "Sysadmin tools"
 sudo apt install -y iotop htop
